@@ -112,15 +112,16 @@ input, select {
 body{
 	width: 100%;
 	font-family: serif;
-
 }
 
+/* 画面全体を98%表示にする */
 .a-margin{
-/*
-	width: 97%;
-*/
+	width: 98%;
 	margin:0 auto;
-	
+}
+
+ul{
+	list-style: none;
 }
 
 
@@ -137,17 +138,60 @@ header{
 	background-color: white;
 }
 
+/* ドロップダウン */
 .menu{
-	padding-top:30px ;
-	padding-left:50px ;
-	font-size: 85px;
 	grid-row: 1;
 	grid-column: 1 / 3;
+	position: relative;
 }
 
+.menu a{
+	font-size: 100px;
+	text-decoration:none;
+	color:black;
+	display: block;
+}
+
+.menu > a:hover {
+	-webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.menu {
+    *zoom: 1;
+}
+
+.menu-second-level {
+	visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  width: 500px;
+  background-color: black;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.menu-second-level li {
+  border-top: 1px solid white;
+  color: blue;
+}
+
+.menu:hover  .menu-second-level {
+  top: 95px;
+  left: 22px;
+  visibility: visible;
+  opacity: 1;
+}
+/* ドロップダウンここまで */
+
 .logo{
+
+	/* padding-rightで要素を押してくれない */
+	padding-left:60px;
 	grid-row: 1;
-	grid-column: 6 / 8;
+	grid-column: 5 / 8;
 }
 
 .logo-img{
@@ -156,8 +200,8 @@ header{
 }
 
 .serch{
-	padding-top:30px ;
-	padding-left:30px ;
+	padding-top:20px;
+	padding-left:60px ;
 	width: 85px;
 	grid-row: 1;
 	grid-column: 11 / 13;
@@ -222,35 +266,31 @@ h1{
 
 .places{
 	width: 100%;
+	height: 700px;
 	display: grid;
 	grid-template-rows: 1fr;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-gap: 30px;
-	padding-left: 30px;
-	/*  30%つぎの項目を見せるための仕様  */
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 45px;
+	padding-left: 45px;
+	/*  10%つぎの項目を見せるための仕様  */
 	 flex: 0 0 90%;
 }
 
 /*7県均等に表示*/
-.kumamoto{
+.ken1{
 	grid-row: 1;
-	grid-column: 1 / 5;
+	grid-column: 1 / 2;
 }
 
-.fukuoka{
+.ken2{
 	grid-row: 1;
-	grid-column: 5 / 9;
-}
-
-.nagasaki{
-	grid-row: 1;
-	grid-column: 9 / 13;
+	grid-column: 2 / 3;
 }
 
 /*各県のパネルの大きさ*/
 .img-places{
 	width: 100%;
-	height: auto;
+	height: 95%;
 	filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
 }
 
