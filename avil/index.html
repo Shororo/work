@@ -13,11 +13,14 @@
 
 <!-- ドロップダウンメニュー -->
 	<div class="menu">
-		<a href="#">≡</a>
+	
+	<!-- ラベルで属性「for」指定したidと関連付ける(チェックボックスやラジオボックスなどと) -->
+  	<label for="toggle">≡</label>
+  	<input type="checkbox" id="toggle">
+  	
 		<ul class="menu-second-level">
-			<li><a href="#">NEWS</a></li>
-			<li><a href="#">KUMAMOTO</a></li>
-			<li><a href="#">FUKUOKA</a></li>
+			<li><a href="#news">NEWS</a></li>
+			<li><a href="#places">PLACES</a></li>
 		</ul>
 	</div>
 	
@@ -37,7 +40,7 @@
 
 <!-- 見出し -->
 <div class="heading">
-	<h2>&nbsp;PLACES</h2>
+	<h2 id="places">&nbsp;PLACES</h2>
 	<p></p>
 </div>
 
@@ -80,7 +83,7 @@
 
 <!-- 見出し -->
 <div class="heading">
-	<h2>&nbsp;&nbsp;&nbsp;NEWS</h2>
+	<h2 id="news">&nbsp;&nbsp;NEWS</h2>
 	<p></p>
 </div>
 
@@ -123,9 +126,12 @@
 	</div>
 </div>
 
-
 <footer>
-
+<ul>
+	<li><a href="index.html">TOP</a></li>
+	<li><a href="#places">PLACES</a></li>
+	<li><a href="#news">NEWS</a></li>
+</ul>
 </footer>
 </div>
 
