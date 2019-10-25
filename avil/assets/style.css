@@ -19,7 +19,7 @@ article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin:0;
-    padding:0;
+    padding:0;	
     border:0;
     outline:0;
     font-size:100%;
@@ -112,7 +112,7 @@ input, select {
 
 body{
 	width: 100%;
-	font-family: serif;
+	font-family: serif;	
 }
 
 label {
@@ -130,15 +130,11 @@ a{
 }
 
 /* 画面全体を98%表示にする */
-.a-margin{
+.all-margin{
 	width: 98%;
 	margin:0 auto;
 }
 
-/* 地域、ジャンル */
-.f-size{
-	font-size: 40px;
-}
 
 /* ヘッダー */
 header{
@@ -155,18 +151,17 @@ header{
 	position: relative;
 }
 .menu > label{
-	font-size: 120px;
+	font-size: 150px;
+	margin-left: 20px;
 }
 .menu input{
 	display:none;
 }
 .menu-second-level {
-	visibility: hidden;
-  opacity: 0;
   z-index: 1;
   position: absolute;
   top: 60px;
-  left: 22px;
+  left: 27px;
   width: 935px;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -182,9 +177,9 @@ header{
 	padding-top: 7px;
 }
 .menu > input:checked + .menu-second-level{
-	top: 95px;
-  left: 22px;
-  visibility: visible;
+	top: 125px;
+  left: 27px;
+  visibility: visible !important;
   opacity: 1;
 }
 /* /////////////ドロップダウンここまで///////////////// */
@@ -254,54 +249,34 @@ h1{
 	filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
 }
 
-/*PLACES 7県選択*/
-
-.slide-wrap {
-  display: flex;
-  margin: 0 auto;
-  width: 100%;
-  
+/*PLACES*/
+.places{
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
 }
 
-.places{
-	width: 100%;
-	height: 700px;
-	display: grid;
-	grid-template-rows: 1fr;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 45px;
-	padding-right: 45px;
-	/*  15%つぎの項目を見せるための仕様  */
-	 flex: 0 0 85%;
+.places ul{
+	width: 330%;
+	flex: 0 0 85%;
 }
 
-/*7県均等に表示*/
-.ken1{
-	grid-row: 1;
-	grid-column: 1 / 2;
-}
-
-.ken2{
-	grid-row: 1;
-	grid-column: 2 / 3;
-}
-
-/*各県のパネルの大きさ*/
-.img-places{
-	width: 100%;
-	height: 95%;
-	filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+.places img{
+	display: inline;
+	float: left;
+	width: 13%;
+	height: 850px;
+	padding-right: 40px;
 }
 
 /*NEWS 最新の観光情報*/
 .news{
+	clear: both;
 	display: grid;
 	grid-gap: 30px;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	margin-bottom: 50px;
 }
 
 .news-core{
@@ -316,12 +291,12 @@ h1{
 
 .area{
 	grid-row: 6 / 7;
-	grid-column: 1 / 4;
+	grid-column: 1 / 5;
 }
 
 .genre{
 	grid-row: 6 / 7;
-	grid-column: 4 / 7;
+	grid-column: 5 / 10;
 }
 
 /* 影を付ける */
@@ -331,16 +306,15 @@ h1{
 
 /* BOX 格子をつける */
 .box8 {
-    margin: 15px 0 60px 0px;
+    margin: 0 0 60px 0px;
     color: black;
-    border-left: solid 5px black;
-    border-bottom: solid 2px black;
-}
+    border-left: solid 20px black;
+    }
 
 .box8 p{
-	padding-top:10px;
-	padding-left:10px;
-
+	padding-top:0px;
+	padding-left:5px;
+	font-size:50px;	
 }
 
 footer{
@@ -349,13 +323,26 @@ footer{
 	background-color: black;
 }
 
-footer a{
-	margin: 20px 30px 0 10px;
-	border-left: solid 30px white;
-	font-size: 60px;
-	color: white;
+footer ul{
+	margin-top: 20px;
+	margin-right:30px;
 	display: inline;
 	float: left;
+}
+
+footer li{
+	margin: 10px 0px 0px 20px;
+}
+
+footer a{
+	border-left: solid 30px white;
+	font-size: 70px;
+	color: white;
 	padding:0 0 0 5px;
-	
+}
+
+
+.f-size{
+	font-size: 50px　!important;
+	font-size: 50px !important;
 }
